@@ -172,15 +172,4 @@
       self.content = content
     }
   }
-
-  #if canImport(Charts)
-    import Charts
-
-    @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
-    extension WithPerceptionTracking: ChartContent where Content: ChartContent {
-      public init(@ChartContentBuilder content: @escaping () -> Content) {
-        self.content = content
-      }
-    }
-  #endif
 #endif
